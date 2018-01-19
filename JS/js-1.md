@@ -1,4 +1,5 @@
 ### <center>JavaScript
+javascript基础,数据类型，语句，转换等。。。
 ***
 #### JavaScript 显示数据
 > window.alert() 弹出警告框  
