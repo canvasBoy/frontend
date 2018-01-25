@@ -43,4 +43,46 @@ for (var i = 0; i < 10; i++) {
     // some code
 }
 return i;
-```
+```  
+#### javascript:void(0) 含义
+void 是 JavaScript 中非常重要的关键字，该操作符指定要计算一个表达式但是不返回值。
+
+	<script type="text/javascript">
+	<!--
+	void func()
+	javascript:void func()
+	
+	或者
+	
+	void(func())
+	javascript:void(func())
+	//-->
+	</script>
+
+	<a href="javascript:void(0)">单击此处什么也不会发生</a>
+	<a href="javascript:void(alert('Warning!!!'))">弹出框框!</a>  
+以下实例中参数 a 将返回 undefined :
+
+	<script type="text/javascript">
+	<!--
+	function getValue(){
+	  var a,b,c;
+	  a = void ( b = 5, c = 7 );
+	  document.write('a = ' + a + ' b = ' + b +' c = ' + c );
+	}
+	//-->
+	</script>
+href="#"与href="javascript:void(0)"的区别
+> \# 包含了一个位置信息，默认的锚是#top 也就是网页的上端。  
+> 而javascript:void(0), 仅仅表示一个死链接。  
+> 在页面很长的时候会使用 # 来定位页面的具体位置，格式为：# + id。  
+> 如果你要定义一个死链接请使用 javascript:void(0) 。
+
+##### 变量提升
+* JavaScript 中，函数及变量的声明都将被提升到函数的最顶部。
+* JavaScript 中，变量可以在使用后声明，也就是变量可以先使用再声明。  
+##### 在函数表达式存储在变量后，变量也可作为一个函数使用：
+	var x = function (a, b) {return a * b};
+	var z = x(4, 3);
+>以上函数实际上是一个 匿名函数 (函数没有名称)。  
+函数存储在变量中，不需要函数名称，通常通过变量名来调用。

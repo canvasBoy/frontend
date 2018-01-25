@@ -1,5 +1,5 @@
 ### <center>JavaScript
-javascript 正则表达式等。。。
+javascript 正则表达式。。。
 ***
 ##### /主体/（修饰符）
 #####在 JavaScript 中，正则表达式通常用于两个字符串方法 : search() 和 replace()。

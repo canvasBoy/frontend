@@ -1,10 +1,6 @@
 #### <center>JavaScript
-变量提升  
 严格模式
 ***
-##### 变量提升
-* JavaScript 中，函数及变量的声明都将被提升到函数的最顶部。
-* JavaScript 中，变量可以在使用后声明，也就是变量可以先使用再声明。
 ##### 严格模式
 "use strict" 指令在 JavaScript 1.8.5 (ECMAScript5) 中新增。  
 它不是一条语句，但是是一个字面量表达式，在 JavaScript 旧版本中会被忽略。  
