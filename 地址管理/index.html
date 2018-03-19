@@ -1,0 +1,59 @@
+#include("../../_layout/_layout.html")
+#setLocal(page={
+	"name": "authLogin",
+	"header": '地址列表',
+	"title": "",
+	"description": "",
+	"keywords": "",
+	"URL": "/user/address"
+})
+#@layout()
+#define main()
+	<div class="address-wrap">
+		<div class="user-address main">
+			#for(list : lists.address_list??)
+			<div class="adrs-list">
+				<div class="left">
+					<div class="top">
+						<span class="name">#(list.consignee_name)</span>
+						<span class="phone">#(list.mobile)</span>
+					</div>
+					<div class="middle">#(list.area)</div>
+					#if(list.address??)
+					<div class="bottom">#(list.address)</div>
+					#end
+				</div>
+				<div class="right param">
+					<div class="right" #if(list.address??) style="line-height: 52px;" #end
+					onclick="window.location.href='/user/delete.html?addressId=#(list.id)';"
+					>删除</div>
+					<div class="left"  #if(list.address??) style="line-height: 52px;" #end>
+						<i class="a" style="display: none;">#(list.id)</i>
+						<i class="b" style="display: none;">#(list.consignee_name)</i>
+						<i class="c" style="display: none;">#(list.mobile)</i>
+						<i class="d" style="display: none;">#(list.area)</i>
+						<i class="e" style="display: none;">#(list.address)</i>
+						修改
+					</div>
+				</div>
+			</div>
+			#end
+
+			<div class="new-adrs">
+				<span class="icon"></span>
+				<span class="text">新增邮寄地址</span>
+			</div>
+		</div>
+
+		<!--新增和修改弹框-->
+		<div class="user-address add" style="display: none;">
+			#include("./edit.html")
+		</div>
+
+	</div>
+
+#end
+#define js()
+<script src="#(assetsPrefix)js/user/address/index-a8b969a32f.js"></script>
+<script src="#(assetsPrefix)js/user/address/input-ea9e6f64fa.js"></script>
+#end

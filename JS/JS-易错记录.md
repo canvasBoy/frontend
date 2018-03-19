@@ -86,3 +86,24 @@ href="#"与href="javascript:void(0)"的区别
 	var z = x(4, 3);
 >以上函数实际上是一个 匿名函数 (函数没有名称)。  
 函数存储在变量中，不需要函数名称，通常通过变量名来调用。
+
+##### 数字可以是数字或者对象
+	var x = 123;
+	var y = new Number(123);
+	typeof(x) // 返回 Number
+	typeof(y) // 返回 Object
+
+* 数字属性  
+	* MAX_VALUE  
+	* MIN_VALUE  
+	* NEGATIVE_INFINITY  
+	* POSITIVE_INFINITY  
+	* NaN  
+	* prototype  
+	* constructor  
+* 数字方法
+	* toExponential()
+	* toFixed()
+	* toPrecision()
+	* toString()
+	* valueOf()

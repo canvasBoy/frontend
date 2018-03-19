@@ -1,0 +1,123 @@
+#include("../../_layout/_layout.html")#setLocal(page={
+	"title": "登录页",
+	"description": "",
+	"keywords": "",
+	"name": "authLogin",
+	"header": "登陆",
+	"style": "background: white"
+})
+#@layout()
+#define main()
+	<div class="login-page">
+		<div class="top">
+			<div class="left">
+				<div class="active">无密快捷登陆</div>
+			</div>
+			<div class="right">
+				<div>密码登陆</div>
+			</div>
+		</div>
+		
+		<form action="/login.html" method="POST">
+			<div class="phone">
+				<div class="text">
+					<div class="icon"></div>
+					手机号码
+				</div>
+				<div class="input">
+					<input name="mobile" type="text" placeholder="支持8868账号登陆" value="#(mobile)">
+					<div class="close"></div>
+				</div>
+			</div>
+			
+			<div class="pwd">
+				<div class="text">
+					<div class="icon"></div>
+					<span>验证码</span>
+				</div>
+
+				<!-- 验证码登陆与密码登陆 -->
+				<div class="input"><input name="vcode" type="text" style="width: 70%;" value="#(vcode)"></div>
+				<div class="input"><input name="passwd" type="password" style="display: none;" value="#(passwd)"></div>
+				
+				<div class="submit">
+					<input class="sub_x" type="button" value="获取验证码">
+					<input class="sub_y" type="button" value="获取语音验证" style="display: none;">
+				</div>
+				<div class="show"></div>
+				<div class="not_show"></div>
+			</div>
+
+			<div class="center_warp">
+				<!-- 
+					区分选项卡 
+					value="mobile" :  密码登陆
+					value="sms" : 快捷登陆
+				-->
+				<input type="hidden" name="type" value="#(type??'sms')">
+
+				<!-- 
+					快捷登陆时，区分短信语音 
+					value="0" : 短信
+					value="1" : 语音
+				-->
+				<input type="hidden" name="vcode_type" value="0">
+				
+				<!-- 登陆成功的跳转地址 -->
+				<input type="hidden" name="currentUrl" value="#(currentUrl)">
+
+				<div class="a_hint"><span class="a_icon"></span><span class="a_text" style="display: inline">点击"获取语音验证"，3分钟内将收到固定来电，请注意接听</span></div>
+				<div class="b_hint"><span></span></div>	
+			
+			</div>
+
+			#if(showImgVcode)
+			<div class="form-item vcode_img">
+				<div class="label-box"><label for="">图片验证码：</label></div>
+					<div class="item-box">
+						<input type="text" name="imgVcode" id="icode" maxlength="4" style="width: 85px;">
+					</div>
+				<div class="action-box">
+					<img src="/imageCode.jsp" id="yzm_img" alt="8868" style="height: 20px;width: 70px;vertical-align: middle;margin-right: 5px;">
+				</div>
+				<div class="action-box">
+					<a href="javascript:void(0)" onclick="changeValidateCode()"><img src="http://public.8868.cn/assets/resources/pc/images/refresh.png" alt="8868" style="height: 18px;width: 18px;vertical-align: middle;margin-right: 5px;"></a>
+				</div>
+			</div>
+			#end
+
+			<button type="submit">登陆</button>
+		</form>
+
+		<a class="clause" href="">
+			<span class="left">登陆即同意</span>
+			<span>《娃娃机服务条款》</span>
+		</a>
+		
+		<div class="popout"></div>
+		#if(error)
+		<div class="error">#(error)</div>
+		#end
+
+		<div class="QQLogin">
+			<div class="title"><span></span>第三方账号登陆<span></span></div>
+			<a href="/qq/qqlogin.html?currentUrl=#(currentUrl)">
+				<div class="icon_qq">
+					<!--<img src="" alt="">-->
+				</div>
+			</a>
+		</div>
+
+	</div>
+#end
+
+#define js()
+	<!--<script src="#(assetsPrefix)js/_common/js/custom-9960eb8e2b.js"></script>-->
+	<script src="#(assetsPrefix)js/user/auth/login-df96c552d7.js"></script>
+	<script>
+	function changeValidateCode() {   
+		var timenow = new Date().getTime();
+		$("#yzm_img")[0].src="/imageCode.jsp?v="+timenow;
+	}
+	</script>
+#end

@@ -1,0 +1,31 @@
+function Bullet(){
+	this.pos
+	this.w;
+	this.h;
+	this.speed;
+	this.time;
+}
+Bullet.prototype.init=function(){
+	this.w=bulletPic.width*scaleX;
+	this.h=bulletPic.height*scaleY;
+	this.pos=[];
+	this.time=0;
+	this.speed=8;
+}
+Bullet.prototype.draw=function(){
+	this.time+=disTime
+	if(this.time>200){
+		this.pos.push({
+			x:myAir.x+myAir.w/2,
+			y:myAir.y
+		})
+		this.time%=200
+	}
+	for(var i in this.pos){
+		this.pos[i].y-=this.speed
+		if(this.pos[i].y<=0){
+			this.pos.splice(i,1)	
+		}
+		ctx.drawImage(bulletPic,this.pos[i].x,this.pos[i].y,this.w,this.h)	
+	}
+}

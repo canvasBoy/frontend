@@ -1,0 +1,227 @@
+html,body{
+  min-height: 100% !important;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+body::-webkit-scrollbar{
+  display: none;
+}
+body::-ms-scrollbar{
+  display: none;
+}
+body::-o-scrollbar{
+  display: none;
+}
+body::scrollbar{
+  display: none;
+}
+.address-wrap{
+  background-image: url(../images/user/address/diwen_bg.png);
+  background-size: rem(750);
+  padding: 60px 0 10px;
+  box-sizing: border-box;
+  margin-top: -50px;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  input{
+    color: gray !important;
+  }
+  input[name=area]{
+  //   overflow: hidden;
+  //   text-overflow:ellipsis;
+  //   white-space: nowrap;
+  }
+}
+.address-wrap::-webkit-scrollbar{
+  display: none;
+}
+.address-wrap::-ms-scrollbar{
+  display: none;
+}
+.address-wrap::-o-scrollbar{
+  display: none;
+}
+.address-wrap::scrollbar{
+  display: none;
+}
+.user-address{
+  background-color: #f8f8f8;
+  padding: 10px rem(20);
+  margin: 0 rem(20);
+  border-radius: 10px;
+  // min-height: rem(1145);
+  min-height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  .new-adrs{
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    // margin: 10px rem(20);
+    border-radius: 5px;
+    background: white;
+    .icon{
+      background-image: url(../images/user/address/+_icon.png);
+      background-size: 18px 18px;
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+    }
+    .text{
+      display: inline-block;
+      font-size: 14px;
+      color: #333;
+      text-indent: 5px;
+    }
+  }
+  .adrs-list{
+    display: flex;
+    box-sizing: border-box;
+    padding: 15px rem(30);
+    background: white;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    &>div{
+      flex: 1;
+    }
+    .left{
+      &>div{
+        // margin-left: rem(30);
+        font-size: 10px;
+        color: #999;
+        height: 11px;
+        line-height: 11px;
+      }
+      .top{
+        height: 14px;
+        line-height: 14px;
+        font-size: 14px;
+        color: #333;
+        span{
+          display: inline-block;
+        }
+        .name{
+          max-width: rem(150);
+          overflow: hidden;
+          text-overflow:ellipsis;
+          white-space: nowrap;
+          margin-right: rem(25);
+        }
+        .phone{
+          width: rem(80);
+        }
+      }
+      .middle{
+        margin-top: 9px;
+        height: 12px;
+        line-height: 12px;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+        width: rem(300);
+      }
+      .bottom{
+        width: rem(300);
+        margin-top: 6px;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+      }
+    }
+    .right{
+      text-align: center;
+      vertical-align: middle;
+      line-height: 35px;
+      &>div{
+        float: right;
+        padding: 0 rem(20);
+        height: 100%;
+        vertical-align: middle;
+        font-size: 14px;
+        color: #333;
+      }
+      .right{
+        margin: 0 rem(10) 0 rem(20);
+      }
+    }
+  }
+}
+.address-wrap::before,.address-wrap::after{
+  content: '';
+  display: block;
+  overflow: hidden;
+}
+@import "./edit";
+
+.select-address-list-warp{
+  // display: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .3);
+  z-index: 10;
+  text-align: center;
+  .select-address-list{
+    height: 41%;
+    width: 90%;
+    position: absolute;
+    left: 5%;
+    bottom: 0;
+    &>div{
+      background: white;
+      border-radius: 5px;
+    }
+    .select-title,.select-bottom,.select-sure{
+      height: 35px;
+      line-height: 35px;
+      font-size: 14px;
+      color: #999;
+    }
+    .select-title{
+      box-shadow: 2px 4px 6px #000;
+    }
+    .select-sure{
+      color: cyan;
+    }
+    .select-bottom{
+      margin-top: 10px;
+    }
+    .select-content{
+      height: 147px;
+      background: #f6f6f6;
+      font-size: 15px;
+      color: #333;
+      display: flex;
+      position: relative;
+    }
+  }
+  .two-border{
+    box-sizing: border-box;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+    position: absolute;
+    top: 63px;
+    width: 100%;
+    height: 21px;
+  }
+  ul{
+    flex: 1;
+    // background: pink;
+    height: 100%;
+    // overflow: hidden;
+    overflow-y: scroll;
+    li{
+      height: 21px;
+      line-height: 21px;
+    }
+  }
+  ul::-webkit-scrollbar {
+    display: none;
+  }
+  ul::scrollbar {
+    display: none;
+  }
+}
+@import "scs.min";

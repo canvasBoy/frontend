@@ -1,0 +1,55 @@
+<!--新增和修改URL/user/edit-->
+<form class="form" action="/user/edit.html" method="get" onsubmit="return check();">
+  <div class="add-top">
+    <div class="w1">
+      <div class="text">
+        联系人:
+      </div>
+      <div class="input">
+        <input name="consigneeName" type="text" placeholder="请输入联系人" value="">
+        <div class="close"></div>
+      </div>
+    </div>
+    <div class="w2">
+      <div class="text">
+        联系电话:
+      </div>
+      <div class="input">
+        <input name="mobile" type="text" placeholder="请输入联系电话" value="">
+        <div class="close"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="add-middle">
+    <div class="w3">
+      <div class="text">
+        所在地区:
+      </div>
+      <div class="input">
+        <input name="area" type="text" readonly placeholder="请输入所在地区" value="广东省 广州市 天河区" id="myAddrs" data-key="4-84-1298" >
+        <div class="close"></div>
+      </div>
+      <!--<div style="text-align:center;">
+        <input type="text" readonly placeholder="Click me to pick an address" id="myAddrs" name="addr" data-key="4-84-1298" value="山西省 太原市 万柏林区" />
+      </div>-->
+    </div>
+    <div class="w4">
+      <div class="text">
+        详细地址:
+      </div>
+      <div class="input">
+        <input name="address" type="text" placeholder="请输入详细地址" value="">
+        <div class="close"></div>
+      </div>
+    </div>
+  </div>
+
+  <input name="addressId" style="display: none;" type="text" value="0">
+
+  <button>保存</button>
+
+  <div class="hint" style="display: none;">
+    <span></span>
+  </div>
+</form>

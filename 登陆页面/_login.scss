@@ -1,0 +1,232 @@
+.login-page{
+  font-size: 14px;
+  color: #333;
+  height: 100%;
+  margin-top: -50px;
+  box-sizing: border-box;
+  padding-top: 50px;
+  background: white;
+  .top{
+    display: flex;
+    height: 50px;
+    border-bottom: .5px solid #eee;
+    &>div{
+      flex: 1;
+      height: 47px;
+      line-height: 47px;
+      text-align: center;
+      &>div{
+        display: inline-block;
+      }
+    }
+    .active{
+      font-weight: bold;
+      border-bottom: 3px solid #ffc422;
+    }
+  }
+  .phone,.pwd{
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: .5px solid #eee;
+    margin: 0 rem(30);
+    &>div{
+      float: left;
+    }
+    .text{
+      width: rem(226);
+      margin-left: rem(30);
+    }
+    .icon{
+      display: inline-block;
+      width: 11px;
+      height: 14px;
+      vertical-align: middle;
+      margin-top: -3px;
+      margin-right: rem(20);
+      background-image: url(../images/user/auth/phone-icon@2x.png);
+    }
+    .close{
+      display: none;
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      top: 13px;
+      right: 20px;
+      // background: red;
+      background-image: url(../images/user/auth/close-icon@2x.png);
+      border-radius: 50%;
+    }
+  }
+  .pwd .icon{
+    width: 12px;
+    background-image: url(../images/user/auth/pwd-icon@2x.png);
+  }
+  input{
+    color: #333;
+    margin-top: -3px;
+    font-size: 14px;
+    vertical-align: middle;
+  }
+  .submit,.show,.not_show{
+    position: absolute;
+    right: rem(40);
+    input{
+      background: none;
+      color: #00b0ff;
+      font-size: 14px;
+    }
+  }
+  .submit{
+    right: rem(20);
+  }
+  button{
+    display: block;
+    width: 80%;
+    height: 40px;
+    margin: 45px auto 25px;
+    text-align: center;
+    color: white;
+    border-radius: 40px;
+    font-size: 14px;
+    line-height: 40px;
+    background: -webkit-linear-gradient(#ffbb1b, #ffa006); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#ffbb1b, #ffa006); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#ffbb1b, #ffa006); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#ffbb1b, #ffa006); /* 标准的语法 */
+  }
+  .a_hint{
+    display: none;
+    font-size: 12px;
+    color: #333;
+    height: 40px;
+    line-height: 40px;
+    background: #f8f8f8;
+    clear: both;
+    .a_icon{
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      vertical-align: middle;
+      margin: 0 2px 0 rem(30);
+      background-image: url(../images/user/auth/plaint-icon@2x.png);
+    }
+  }
+  .b_hint{
+    height: 14px;
+    line-height: 14px;
+    text-align: right;
+    margin: 15px 20px 0 0;
+    span{
+      font-size: 14px;
+      color: #333;
+    }
+  }
+  .show,.not_show{
+    display: none;
+    // background: red;
+    width: 20px;
+    height: 8px;
+    top: 21px;
+    background-image: url(../images/user/auth/not-show-icon@2x.png);
+  }
+  .show{
+    // background: green;
+    height: 12px;
+    top: 19px;
+    background-image: url(../images/user/auth/show-icon@2x.png);
+  }
+  .clause{
+    display: block;
+    text-align: center;
+    span{
+      color: #333;
+      font-size: 14px;
+    }
+    .left{
+      color: #999;
+    }
+  }
+  .popout,.error{
+    max-width: 60%;
+    // word-wrap: break-word;
+    text-align: center;
+    font-size: 14px;
+    color: #666; 
+    line-height: 16px;
+    // background: #e6e6e6;
+    background: rgba(0,0,0,.1);
+    padding: 6.5px rem(30);
+    border-radius: 14.5px;
+    margin: 50px auto 0;
+    width:fit-content;
+    width:-webkit-fit-content;
+    width:-moz-fit-content;
+    width:-o-fit-content;
+  }
+  .popout{
+    display: none;
+  }
+  .center_warp{
+    width: 100%;
+    height: 70px;
+    overflow: hidden;
+    // position: relative;
+  }
+  .vcode_img{
+    position: absolute;
+    bottom: 85px;
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    z-index: 20;
+    background: white;
+    label,.item-box,.action-box{
+      float: left;
+    }
+    .item-box{
+      input{
+        border: .5px solid #e6e6e6;
+      }
+      margin-right: 20px;
+    }
+    label{
+      margin-left: 50px;
+    }
+  }
+  form{
+    position: relative;
+  }
+  .QQLogin{
+    text-align: center;
+    .title{
+      margin: 20px 0 10px;
+      font-size: 12px;
+      color: #999;
+    }
+    a{
+      display: inline-block;
+    }
+    .icon_qq{
+      width: 45px;
+      height: 45px;
+      background: url(../images/user/auth/qq_login@2x.png);
+      background-size: 100%;
+      transform: rotate(-90deg);
+    }
+    span{
+      display: inline-block;
+      width: rem(130);
+      height: 1px;
+      background: #999;
+      margin-bottom: 2px;
+    }
+    span:nth-of-type(1){
+      margin-right: 8px;
+    }
+    span:nth-of-type(2){
+      margin-left: 8px;
+    }
+  }
+}

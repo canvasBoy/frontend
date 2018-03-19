@@ -1,0 +1,6 @@
+<div id="slider" class="image-slider" style="padding-top: 36%;">
+  <ul class="image-slider-box" style="padding-top: 36%">
+    #for(el: main_boards)<li><a style="width: 100%;" href="#(el.target_url)"><img style="max-width: 100%;height: auto;" src="#(el.pic_url)" alt="404"></a></li>#end
+  </ul>
+  <div class="image-slider-nav"><div class="indicator">#for(el: main_boards)<span #if(for.first) class="current"#end></span>#end</div></div>
+</div>

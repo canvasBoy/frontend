@@ -1,0 +1,66 @@
+.add,.edit{
+  font-size: 14px;
+  color: #333;
+  .text{
+    float: left;
+    width: rem(210);
+    text-indent: rem(30);
+  }
+  .input{
+    float: left;
+  }
+  .w1,.w2,.w3,.w4{
+    overflow: hidden;
+    box-sizing: border-box;
+    height: 50px;
+    line-height: 50px;
+    background: white;
+  }
+  .w1,.w3{
+    border-bottom: .5px solid #eee;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  .w2,.w4{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  .add-top,.add-middle{
+    margin: 0 auto 10px;
+
+  }
+  button{
+    display: block;
+    width: 100%;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    color: white;
+    margin-top: 40px;
+    border-radius: 20px;
+    background: -webkit-linear-gradient(#ffbb1b,#ffa006);
+    background: -o-linear-gradient(#ffbb1b,#ffa006);  
+    background: -mos-linear-gradient(#ffbb1b,#ffa006);  
+    background: -moz-linear-gradient(#ffbb1b,#ffa006);  
+    background: linear-gradient(#ffbb1b,#ffa006);
+  }
+  .hint{
+    z-index: 10;
+    width: 100%;
+    position: absolute;
+    bottom: -200px;
+    text-align: center;
+    &>span{
+      display: inline-block;
+      font-size: 12px;
+      height: 14px;
+      line-height: 14px;
+      padding: 3px 15px;
+      background: #e6e6e6;
+      border-radius: 10px;
+    }
+  }
+  form{
+    position: relative;
+  }
+}

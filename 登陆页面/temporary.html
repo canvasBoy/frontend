@@ -1,0 +1,14 @@
+#include("../../_layout/_layout.html")#setLocal(page={
+	"title": "个人中心",
+	"description": "",
+	"keywords": ""
+})
+
+#@layout()
+#define main()
+	正在跳转，请稍后....<br /><br />
+	如果没有跳转，请点<a href="#(destination??'/')" >这里</a>
+	<script>
+		document.location.href = "#(destination??'/')";
+	</script>
+#end

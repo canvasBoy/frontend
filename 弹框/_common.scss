@@ -1,0 +1,62 @@
+.hint-common-bg{
+  display: none;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  background-color: rgba(139, 219, 254, .8);
+  width: 100%;
+  min-height:100%;
+  .hint_content{
+    position: absolute;
+    top: 50%;
+    background: white;
+    width: 80%;
+    margin-top: -100px;
+    margin-left: 10%;
+    height: 200px;
+    border-radius: 7.5px;
+    text-align: center;
+    .hint_top{
+      font-size: 16px;
+      color: #333;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      position: relative;
+    }
+    .hint_icon{
+      position: absolute;
+      right: 8px;
+      top: 8px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-image: url(../images/_template/hint/off@2x.png);
+      background-size: 100%;
+    }
+    .hint_center{
+      height: 110px; 
+      box-sizing: border-box;
+      padding: 20px rem(40);
+      font-size: 14px;
+      color: #999;
+    }
+    .hint_bottom{
+      border-top: .5px solid #eee;
+      display: flex;
+      height: 50px;
+      line-height: 50px;
+      &>div{
+        flex: 1;
+        text-align: center;
+      }
+      .yes{
+        color: #f60;
+      }
+    }
+  }
+}
+.body_no_scroll{
+  height: 100%;
+  overflow: hidden;
+}
